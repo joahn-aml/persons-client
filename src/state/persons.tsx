@@ -7,6 +7,7 @@ import {
 } from 'react'
 import { Person } from '@/types/Person'
 import { gql, useClient } from 'urql'
+import { useSnackbar } from 'notistack'
 
 const GET_PERSONS = gql`
   query GetPersons {
@@ -62,6 +63,7 @@ type PersonsProviderProps = {
 }
 
 export const PersonsProvider = ({ children }: PersonsProviderProps) => {
+  const { enqueueSnackbar } = useSnackbar()
   const apiClient = useClient()
   const [persons, setPersons] = useState<Person[]>([])
 
@@ -83,18 +85,24 @@ export const PersonsProvider = ({ children }: PersonsProviderProps) => {
       ...persons,
       { id, name, birthdate, title, license },
     ])
+
+    enqueueSnackbar('En ny användare har skapats', { variant: 'info' })
   }
 
   const removePerson = async (personId: string) => {
     await apiClient.mutation(REMOVE_PERSON, { personId }).toPromise()
 
     setPersons((persons) => persons.filter((p) => p.id !== personId))
+
+    enqueueSnackbar('Användaren har tagits bort')
   }
 
   const removeAllPersons = async () => {
     await apiClient.mutation(REMOVE_ALL_PERSONS, {}).toPromise()
 
     setPersons([])
+
+    enqueueSnackbar('Alla användare är borttagna')
   }
 
   useEffect(() => {
