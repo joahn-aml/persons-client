@@ -1,4 +1,4 @@
-# Persons Client
+# Persons client
 
 A Single Page App client to view, create and delete dummy persons from a GraphQL API server.
 
