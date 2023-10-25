@@ -13,7 +13,7 @@ import { useState } from 'react'
 
 export const Actions = () => {
   const { getPersons, removeAllPersons, createRandomPerson } = usePersons()
-  const [openDialog, setOpenDialog] = useState<boolean>(false)
+  const [openDialog, setOpenDialog] = useState(false)
 
   return (
     <>
