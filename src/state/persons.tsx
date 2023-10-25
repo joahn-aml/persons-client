@@ -86,7 +86,7 @@ export const PersonsProvider = ({ children }: PersonsProviderProps) => {
       { id, name, birthdate, title, license },
     ])
 
-    enqueueSnackbar('En ny användare har skapats', { variant: 'info' })
+    enqueueSnackbar('En ny person har skapats', { variant: 'info' })
   }
 
   const removePerson = async (personId: string) => {
@@ -94,7 +94,7 @@ export const PersonsProvider = ({ children }: PersonsProviderProps) => {
 
     setPersons((persons) => persons.filter((p) => p.id !== personId))
 
-    enqueueSnackbar('Användaren har tagits bort')
+    enqueueSnackbar('Personen har tagits bort')
   }
 
   const removeAllPersons = async () => {
@@ -102,7 +102,7 @@ export const PersonsProvider = ({ children }: PersonsProviderProps) => {
 
     setPersons([])
 
-    enqueueSnackbar('Alla användare är borttagna')
+    enqueueSnackbar('Alla personer är borttagna')
   }
 
   useEffect(() => {

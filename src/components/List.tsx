@@ -102,8 +102,7 @@ export const List = () => {
               <TableCell align="center" padding="checkbox">
                 <IconButton
                   color="primary"
-                  aria-label="Ta bort den här användaren"
-                  title="Ta bort den här användaren"
+                  title="Ta bort den här personen"
                   onClick={() => removePerson(person.id)}
                 >
                   <PersonRemoveIcon />
