@@ -48,10 +48,10 @@ export const Actions = () => {
         </Button>
       </Stack>
       <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
-        <DialogTitle>{'Ta bort alla användare?'}</DialogTitle>
+        <DialogTitle>{'Ta bort alla personer?'}</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Är du helt säker på att du vill ta bort alla användare?
+            Är du helt säker på att du vill ta bort alla personer?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
