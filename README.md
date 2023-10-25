@@ -29,16 +29,20 @@ A Single Page App client to view, create and delete dummy persons from a GraphQL
 
 ## Server
 
-[The server codebase](https://github.com)
+The server codebase:
+[https://github.com/joahn-aml/persons-server](https://github.com/joahn-aml/persons-server)
 
-The demo server is used by default in both `development` and `production` mode.
+Demo server:
+[https://persons-server.vercel.app/api/graphql](https://persons-server.vercel.app/api/graphql)
 
-- To change the server API endpoint for both `development` and `production` change the `VITE_GRAPHQL_API` env variable in the `.env` file.
-- To change the server API endpoint for `development` set the `VITE_GRAPHQL_API` env variable in the `.env.development` file.
-- To change the server API endpoint for `production` set the `VITE_GRAPHQL_API` env variable in the `.env.production` file.
+The demo server is used by default in `development` and `production` mode.
 
-_The more specific `.env.[mode]`-files will have priority over the `.env`-file_
+- To change the server API endpoint in `development` and `production` modes change the `VITE_GRAPHQL_API` env variable in the `.env` file.
+- To change the server API endpoint in `development` mode set the `VITE_GRAPHQL_API` env variable in the `.env.development` file.
+- To change the server API endpoint in `production` mode set the `VITE_GRAPHQL_API` env variable in the `.env.production` file.
+
+_The more specific `.env.[mode]`-files have priority over the `.env`-file_
 
 ## Demo
 
-TODO: Link here
+[https://persons-client.vercel.app/](https://persons-client.vercel.app/)
