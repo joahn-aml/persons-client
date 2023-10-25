@@ -35,7 +35,7 @@ The server codebase:
 Demo server:
 [https://persons-server.vercel.app/api/graphql](https://persons-server.vercel.app/api/graphql)
 
-The demo server is used by default in `development` and `production` mode.
+The demo server is used by default in `development` and `production` modes.
 
 - To change the server API endpoint in `development` and `production` modes change the `VITE_GRAPHQL_API` env variable in the `.env` file.
 - To change the server API endpoint in `development` mode set the `VITE_GRAPHQL_API` env variable in the `.env.development` file.
