@@ -8,6 +8,7 @@ import { CssBaseline } from '@mui/material'
 import { ApiProvider } from '@/state/api.tsx'
 import { PersonsProvider } from '@/state/persons'
 import { SnackbarProvider } from 'notistack'
+
 export const App = () => (
   <ThemeProvider theme={theme}>
     <CssBaseline />
