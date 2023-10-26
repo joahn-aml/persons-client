@@ -60,8 +60,8 @@ export const Actions = () => {
             disableElevation
             variant="contained"
             color="warning"
-            onClick={async () => {
-              await removeAllPersons()
+            onClick={() => {
+              removeAllPersons()
               setOpenDialog(false)
             }}
             autoFocus
